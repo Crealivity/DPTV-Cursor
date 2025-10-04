@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="StatusRowView">
+        <attr name="sr_title" format="string"/>
+        <attr name="sr_state" format="enum">
+            <enum name="ok" value="0"/>
+            <enum name="warn" value="1"/>
+            <enum name="error" value="2"/>
+        </attr>
+    </declare-styleable>
+</resources>

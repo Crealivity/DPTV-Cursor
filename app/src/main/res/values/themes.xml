@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Base App Theme (AppCompat DayNight) -->
+    <style name="AppTheme" parent="Theme.AppCompat.DayNight.NoActionBar">
+        <!-- Brand / surfaces -->
+        <item name="colorPrimary">@color/colorPrimary</item>          <!-- main background -->
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>  <!-- status/nav bars, elevated surfaces -->
+        <item name="colorAccent">@color/colorAccent</item>
+
+        <!-- Control tints -->
+        <item name="colorControlActivated">@color/blue</item>
+        <item name="colorControlHighlight">@color/colorAccent</item>
+        <item name="colorButtonNormal">@color/blue</item>
+
+        <!-- Surfaces -->
+        <item name="android:windowBackground">@color/colorPrimary</item>
+        <item name="android:navigationBarColor">@color/colorPrimaryDark</item>
+        <item name="android:statusBarColor">@color/colorPrimaryDark</item>
+
+        <!-- Typography defaults (use day/night-aware colors) -->
+        <item name="android:textAppearance">@style/Text.DP.Body</item>
+        <item name="android:textColorPrimary">@color/text_primary</item>
+        <item name="android:textColorSecondary">@color/text_secondary</item>
+
+        <!-- Widgets -->
+        <item name="buttonStyle">@style/Widget.DP.Button</item>
+        <item name="switchStyle">@style/Widget.DP.Switch</item>
+        <item name="seekBarStyle">@style/Widget.DP.SeekBar</item>
+        <item name="spinnerStyle">@style/Widget.DP.Spinner</item>
+
+        <!-- ActionBar -->
+        <item name="actionBarTheme">@style/ActionBar.DP</item>
+        <item name="titleTextStyle">@style/Text.DP.Title</item>
+    </style>
+
+    <!-- ActionBar text colors (also day/night-safe) -->
+    <style name="ActionBar.DP" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
+        <item name="android:textColorPrimary">@color/text_primary</item>
+        <item name="android:textColorSecondary">@color/text_secondary</item>
+    </style>
+
+    <!-- Alert dialog theme -->
+    <style name="Wolf_Alert_Disp" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:background">@color/colorPrimary</item>
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:textColorPrimary">@color/text_primary</item>
+        <item name="android:colorAccent">@color/colorAccent</item>
+        <item name="android:colorControlHighlight">@color/colorAccent</item>
+    </style>
+
+</resources>
