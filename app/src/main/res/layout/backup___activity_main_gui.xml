@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@color/colorPrimaryDark">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="12dp">
+
+        <!-- Title -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:text="Service Status"
+            android:textAlignment="center"
+            android:textColor="@color/blue"
+            android:textSize="18sp" />
+
+        <!-- Status rows (stacked for narrow) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/gui_acc_perm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Accessibility Permission"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:ellipsize="end"
+                android:maxLines="1" />
+
+            <TextView
+                android:id="@+id/gui_acc_serv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Accessibility Service"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:layout_marginTop="4dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="8dp">
+
+            <TextView
+                android:id="@+id/gui_overlay_perm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Overlay Permission"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:ellipsize="end"
+                android:maxLines="1" />
+
+            <TextView
+                android:id="@+id/gui_overlay_serv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Overlay Service"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:layout_marginTop="4dp" />
+        </LinearLayout>
+
+        <!-- CTA -->
+        <Button
+            android:id="@+id/gui_setup_perm"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/bg_button"
+            android:text="SETUP PERMISSIONS"
+            android:textColor="@color/white" />
+
+        <!-- About / link -->
+        <TextView
+            android:id="@+id/gui_about"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:autoLink="web"
+            android:fontFamily="monospace"
+            android:linksClickable="true"
+            android:textAlignment="center"
+            android:textColor="@color/colorAccent"
+            android:textSize="16sp"
+            tools:text="https://example.com" />
+
+        <!-- Section header -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="Other Settings"
+            android:textAlignment="center"
+            android:textColor="@color/blue"
+            android:textSize="18sp" />
+
+        <!-- Mouse size -->
+        <LinearLayout
+            android:id="@+id/mouse_style"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="8dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Mouse Size (Small to Large)"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <SeekBar
+                android:id="@+id/dsbar_mouse_size"
+                style="@style/Widget.AppCompat.SeekBar.Discrete"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:max="4"
+                android:progress="1"
+                android:progressBackgroundTint="@color/text_secondary"
+                android:progressTint="@color/white"
+                android:thumbTint="@color/white"
+                android:tickMarkTint="@color/white" />
+        </LinearLayout>
+
+        <!-- Scroll speed -->
+        <LinearLayout
+            android:id="@+id/mouse_scroll_speed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="8dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Scroll Speed (Fast to Slow)"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <SeekBar
+                android:id="@+id/dsbar_mouse_scspeed"
+                style="@style/Widget.AppCompat.SeekBar.Discrete"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:max="20"
+                android:progress="4"
+                android:progressBackgroundTint="@color/text_secondary"
+                android:progressTint="@color/white"
+                android:thumbTint="@color/white"
+                android:tickMarkTint="@color/white" />
+        </LinearLayout>
+
+        <!-- Mouse icon selector (vertical for narrow) -->
+        <LinearLayout
+            android:id="@+id/mouse_icon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="8dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Mouse Icon"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <Spinner
+                android:id="@+id/sp_mouse_icon"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:drawSelectorOnTop="true"
+                android:popupBackground="@drawable/focus_selector"
+                android:dropDownWidth="match_parent" />
+        </LinearLayout>
+
+        <!-- Checkboxes (stacked) -->
+        <CheckBox
+            android:id="@+id/cb_border_window"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Bordered Window"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:buttonTint="@color/white" />
+
+        <CheckBox
+            android:id="@+id/cb_disable_bossKey"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Disable Boss Key (useful for full size remotes)"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:buttonTint="@color/white" />
+
+        <CheckBox
+            android:id="@+id/cb_behaviour_bossKey"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Will Boss Key Toggle? (default is long press)"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:buttonTint="@color/white" />
+
+        <!-- Boss key row (column for narrow) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="8dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Boss Key"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/et_override"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="6dp"
+                android:hint="(Default: 164)"
+                android:inputType="number"
+                android:textColor="@color/white"
+                android:textColorHint="@color/text_secondary" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="6dp">
+
+                <Button
+                    android:id="@+id/bt_detect"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:onClick="callDetect"
+                    android:background="@drawable/bg_button"
+                    android:text="DETECT"
+                    android:textColor="@color/white" />
+
+                <Space
+                    android:layout_width="8dp"
+                    android:layout_height="1dp" />
+
+                <Button
+                    android:id="@+id/bt_saveBossKey"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_button"
+                    android:text="SAVE"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

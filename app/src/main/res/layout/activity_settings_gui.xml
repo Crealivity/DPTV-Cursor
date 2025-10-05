@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:fitsSystemWindows="true"
+    android:background="@color/colorPrimaryDark">
+
+    <LinearLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Screen title -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:background="@drawable/bg_card">
+
+            <TextView
+                style="@style/Text.DP.Title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Settings"
+                android:textSize="24sp" />
+        </LinearLayout>
+
+        <!-- Appearance (look & size) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:background="@drawable/bg_card"
+            android:layout_marginTop="12dp" >
+
+            <TextView
+                style="@style/Text.DP.Title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Appearance" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Cursor size (Small → Large)"
+                android:textColor="@color/text_primary"
+                android:textSize="16sp"
+                android:layout_marginTop="8dp" />
+
+            <SeekBar
+                android:id="@+id/dsbar_mouse_size"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:max="30"
+                android:progress="5"
+                android:progressBackgroundTint="@color/text_secondary"
+                android:progressTint="@color/text_primary"
+                android:thumbTint="@color/text_primary"
+                android:tickMarkTint="@color/text_primary" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Cursor style"
+                android:textColor="@color/text_primary"
+                android:textSize="16sp"
+                android:layout_marginTop="8dp" />
+
+            <Spinner
+                android:id="@+id/sp_mouse_icon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="?attr/spinnerStyle"
+                android:dropDownWidth="match_parent" />
+
+            <Button
+                android:id="@+id/bt_manage_custom"
+                style="@style/Widget.DP.Button"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="8dp"
+                android:text="Edit custom cursor" />
+        </LinearLayout>
+
+        <!-- Movement (speed & scrolling) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:background="@drawable/bg_card"
+            android:layout_marginTop="12dp">
+
+            <TextView
+                style="@style/Text.DP.Title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Movement" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Pointer speed (Slow → Fast)"
+                android:textColor="@color/text_primary"
+                android:textSize="16sp"
+                android:layout_marginTop="8dp" />
+
+            <SeekBar
+                android:id="@+id/dsbar_mouse_speed"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:max="1000"
+                android:progress="250"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:splitTrack="false"
+                android:progressBackgroundTint="@color/text_secondary"
+                android:progressTint="@color/text_primary"
+                android:thumbTint="@color/text_primary"
+                android:tickMarkTint="@color/text_primary" />
+
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Scroll speed (Slow → Fast)"
+                android:textColor="@color/text_primary"
+                android:textSize="16sp"
+                android:layout_marginTop="8dp" />
+
+            <SeekBar
+                android:id="@+id/dsbar_scroll_speed"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:max="1000"
+                android:progress="250"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:splitTrack="false"
+                android:progressBackgroundTint="@color/text_secondary"
+                android:progressTint="@color/text_primary"
+                android:thumbTint="@color/text_primary"
+                android:tickMarkTint="@color/text_primary" />
+
+            <CheckBox
+                android:id="@+id/cb_scroll_inertia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Disable scroll inertia/acceleration (useful on small screens)"
+                android:textColor="@color/text_primary"
+                android:textSize="16sp"
+                android:buttonTint="@color/text_primary"
+                android:layout_marginTop="8dp"
+                android:visibility="gone"/>
+
+        </LinearLayout>
+
+        <!-- Behaviour -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:background="@drawable/bg_card"
+            android:layout_marginTop="12dp">
+
+            <TextView
+                style="@style/Text.DP.Title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Behaviour" />
+
+            <CheckBox
+                android:id="@+id/cb_border_window"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Keep cursor inside screen edges"
+                android:textColor="@color/text_primary"
+                android:textSize="16sp"
+                android:buttonTint="@color/text_primary"
+                android:layout_marginTop="8dp" />
+
+            <CheckBox
+                android:id="@+id/cb_hide_in_launchers"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Hide cursor on the home screen/launchers"
+                android:textColor="@color/text_primary"
+                android:textSize="16sp"
+                android:buttonTint="@color/text_primary" />
+
+            <CheckBox
+                android:id="@+id/cb_auto_hide"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Disable  after 1min idle"
+                android:textColor="@color/text_primary"
+                android:textSize="16sp"
+                android:buttonTint="@color/text_primary" />
+
+            <CheckBox
+                android:id="@+id/cb_disable_toasts"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Disable toasts/pop-up tips (useful on small screens)"
+                android:textColor="@color/text_primary"
+                android:textSize="16sp"
+                android:buttonTint="@color/text_primary" />
+        </LinearLayout>
+
+        <!-- Shortcut -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:background="@drawable/bg_card"
+            android:layout_marginTop="12dp">
+
+            <TextView
+                style="@style/Text.DP.Title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Shortcut" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Configure a shortcut to toggle " />
+
+            <CheckBox
+                android:id="@+id/cb_disable_bossKey"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Disable shortcut key (useful on full-size remotes)"
+                android:textColor="@color/text_primary"
+                android:textSize="16sp"
+                android:buttonTint="@color/text_primary"
+                android:layout_marginTop="8dp" />
+
+            <CheckBox
+                android:id="@+id/cb_behaviour_bossKey"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="SHORT press to toggle (default: LONG press)"
+                android:textColor="@color/text_primary"
+                android:textSize="16sp"
+                android:buttonTint="@color/text_primary" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Current shortcut key code (default: 164)"
+                android:textColor="@color/text_primary"
+                android:textSize="16sp"
+                android:layout_marginTop="8dp" />
+
+            <EditText
+                android:id="@+id/et_override"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="6dp"
+                android:hint="Enter Android key code"
+                android:inputType="number"
+                android:textColor="@color/text_primary"
+                android:textColorHint="@color/text_secondary" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="6dp">
+
+                <Button
+                    android:id="@+id/bt_detect"
+                    style="@style/Widget.DP.Button"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:onClick="callDetect"
+                    android:text="DETECT" />
+
+                <Space
+                    android:layout_width="8dp"
+                    android:layout_height="1dp" />
+
+                <Button
+                    android:id="@+id/bt_saveBossKey"
+                    style="@style/Widget.DP.Button"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:text="SAVE" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

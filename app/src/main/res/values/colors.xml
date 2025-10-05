@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Launcher bg (neutral) -->
+    <color name="ic_launcher_background">#FFE5E5EA</color>
+
+    <!-- Surfaces -->
+    <color name="colorPrimary">#FFFFFFFF</color>        <!-- main background -->
+    <color name="colorPrimaryDark">#FFF2F2F7</color>    <!-- bars / cards bg -->
+
+    <!-- Accent (iOS blue) -->
+    <color name="colorAccent">#FF0A84FF</color>
+    <color name="blue">#FF0A84FF</color>
+
+    <!-- Texts -->
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="text_primary">#000000</color>     <!-- black -->
+    <color name="text_secondary">#99000000</color> <!-- 60% black -->
+
+    <!-- Indicators -->
+    <color name="ok_green">#FF00C853</color>
+    <color name="bad_red">#FFD50000</color>
+
+    <!-- New tokens for drawables -->
+    <color name="card_bg">#FFF7F7F7</color>          <!-- light card -->
+    <color name="card_stroke">#1A000000</color>      <!-- 10% black -->
+    <color name="chip_bg">#14000000</color>          <!-- ~8% black -->
+    <color name="focus_stroke">#FF0A84FF</color>     <!-- accent -->
+    <color name="focus_fill">#00FFFFFF</color>       <!-- transparent -->
+    <color name="btn_bg">#000000</color>           <!-- accent -->
+    <color name="btn_bg_pressed">#99000000</color>   <!-- darker accent -->
+    <color name="btn_text">#FFFFFFFF</color>
+</resources>

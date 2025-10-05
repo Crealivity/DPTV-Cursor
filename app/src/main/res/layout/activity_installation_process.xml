@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:fitsSystemWindows="true"
+    android:background="@color/colorPrimaryDark">
+
+    <LinearLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Screen title -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:background="@drawable/bg_card">
+
+            <TextView
+                style="@style/Text.DP.Title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Installation"
+                android:textSize="24sp" />
+        </LinearLayout>
+
+        <!-- Status card (tap to open details/setup) -->
+        <LinearLayout
+            android:id="@+id/card_status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:background="@drawable/bg_card"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_marginTop="12dp">
+
+            <TextView
+                style="@style/Text.DP.Title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Status" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="8dp">
+
+                <TextView
+                    android:id="@+id/gui_acc_perm"
+                    style="@style/Text.DP.Body"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Accessibility Permission" />
+
+                <TextView
+                    android:id="@+id/gui_acc_serv"
+                    style="@style/Text.DP.Body"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Accessibility Service"
+                    android:layout_marginTop="4dp" />
+
+                <TextView
+                    android:id="@+id/gui_overlay_perm"
+                    style="@style/Text.DP.Body"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Overlay Permission"
+                    android:layout_marginTop="4dp" />
+
+                <TextView
+                    android:id="@+id/gui_overlay_serv"
+                    style="@style/Text.DP.Body"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Overlay Service"
+                    android:layout_marginTop="4dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Permissions shortcut -->
+        <Button
+            android:id="@+id/gui_setup_perm"
+            style="@style/Widget.DP.Button"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="12dp"
+            android:text="Accessibility permissions" />
+
+        <!-- Quick guide/instructions -->
+        <LinearLayout
+            android:id="@+id/card_instructions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:background="@drawable/bg_card"
+            android:layout_marginTop="16dp">
+
+            <TextView
+                style="@style/Text.DP.Title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Guide" />
+
+            <TextView
+                style="@style/Text.DP.Body"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="• Accessibility permission is required so the cursor can move and click.\n\n• Overlay permission is required so the cursor can show on top of apps.\n\n• Both services must stay active — if one fails, the cursor won’t appear or respond." />
+
+            <TextView
+                style="@style/Text.DP.Body"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="⚠️ On some devices, granting permissions isn’t enough because the system blocks services unless enabled with ADB. \n\nIf that happens, you can follow this setup guide :" />
+
+            <TextView
+                android:id="@+id/tv_adb_link"
+                style="@style/Text.DP.Body"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:autoLink="web"
+                android:linksClickable="true"
+                android:text="@string/app_repository" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- package="io.github.crealivity.dptvcursor"> -->
+
+    <uses-feature
+        android:name="android.software.leanback"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.touchscreen"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+
+    <queries>
+        <intent>
+            <action android:name="android.intent.action.MAIN" />
+            <category android:name="android.intent.category.HOME" />
+        </intent>
+    </queries>
+
+    <application
+        android:allowBackup="true"
+        android:banner="@drawable/ic_banner"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <activity
+            android:screenOrientation="fullSensor"
+            android:name=".gui.GuiActivity"
+            android:launchMode="singleTop"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.LEANBACK_LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".gui.InstallationActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="fullSensor"
+            android:exported="false" />
+
+        <activity
+            android:name=".gui.SettingsActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="fullSensor"
+            android:exported="false" />
+
+        <activity
+            android:screenOrientation="fullSensor"
+            android:name=".helper.KeyDetection"
+            android:launchMode="singleTop"
+            android:exported="false"/>
+
+        <activity
+            android:name=".gui.CustomCursorActivity"
+            android:label="Custom cursor"
+            android:parentActivityName=".gui.SettingsActivity"
+            android:exported="false"/>
+
+        <service
+            android:name=".services.MouseEventService"
+            android:label="Mouse toggle service"
+            android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.accessibilityservice.AccessibilityService" />
+            </intent-filter>
+            <meta-data
+                android:name="android.accessibilityservice"
+                android:resource="@xml/accessibility_service_config" />
+        </service>
+
+    </application>
+
+</manifest>

@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">DPTV Cursor</string>
+    <string name="app_slogan">DPTV Cursor - A mouse cursor for dumbphones and TVs</string>
+    <string name="app_repository">https://github.com/Crealivity/DPTV-Cursor</string>
+    <string name="accessibility_service_description">Control mouse cursor on your Android dumphone / TV</string>
+    <string name="perm_acc_allowed">Accessibility permissions: ✅</string>
+    <string name="perm_acc_denied">Accessibility permissions: ❌</string>
+    <string name="perm_overlay_allowed">Overlay permissions: ✅</string>
+    <string name="perm_overlay_denied">Overlay permissions: ❌</string>
+    <string name="serv_acc_allowed">Accessibility service: ✅</string>
+    <string name="serv_acc_denied">Accessibility service: ❌</string>
+    <string name="serv_overlay_allowed">Overlay service: ✅</string>
+    <string name="serv_overlay_denied">Overlay service: ❌</string>
+    <string name="installation_complete">INSTALLATION COMPLETED ✅</string>
+    <string name="installation_incomplete">INSTALLATION INCOMPLETE ❌</string>
+    <string name="KeyDetection_Help_BossKey">Press and hold any key for about 3 seconds, then release it to set it as your Shortcut Key.\n\nThe Shortcut Key lets you quickly enable or disable the mouse service, and also switch between Scroll mode and D-Pad mode.\n\nIf no popup appears after pressing a key, it means that key is not supported.</string>
+    <string-array name="mouse_style_arr">
+        <item>Dark (default)</item>
+        <item>Light</item>
+    </string-array>
+</resources>
