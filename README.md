@@ -123,6 +123,12 @@ Once done, the cursor should respond as soon as you use the D-pad/keys.
 That’s it. You’ll now be able to toggle and use the cursor with your remote.
 If you skip the overlay permission step and enable the service first, you might lock your remote controls until you plug in a physical mouse or use ADB, so follow the order carefully.
 
+#### ⚠️ **WARNING FOR FIRE TV/STICK USERS:**
+
+Some recent FireOS builds restrict accessibility services and may block DPTV Cursor from starting.
+Before setting up, please read this [issue](https://github.com/Crealivity/DPTV-Cursor/issues/1) for details, and try the suggested commands.
+If it still doesn’t work after trying them, it means your device isn’t compatible with accessibility-based cursor apps.
+
 #### RECOVERY (IF YOU SOFT-BRICK THE TV)
 
 If you enabled the service before overlay permission and inputs seem “stuck”:
